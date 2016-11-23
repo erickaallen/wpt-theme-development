@@ -1,6 +1,7 @@
 <?php
 
 add_theme_support( 'menus' );
+add_theme_support( 'post-thumbnails' );
 
 function register_theme_menus() {
 
@@ -10,6 +11,8 @@ function register_theme_menus() {
         )
     );
 }
+add_action( 'init', 'register_theme_menus' );
+
 function wpt_theme_styles() {
 
     wp_enqueue_style( 'foundation_css', get_template_directory_uri() . '/css/foundation.css' );
